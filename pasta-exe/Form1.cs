@@ -30,7 +30,7 @@ namespace pasta_exe
             bgmReader.Volume = 0.0f;
             await Task.Run(() =>
             {
-                Thread.Sleep(pastaReader.TotalTime - TimeSpan.FromMilliseconds(435));
+                Thread.Sleep(pastaReader.TotalTime - TimeSpan.FromMilliseconds(420));
                 bgmReader.Volume = 1.0f;
             });
         }
@@ -39,7 +39,7 @@ namespace pasta_exe
         {
             await Task.Run(() =>
             {
-                bgmReader.Volume = 1.0f;
+                //bgmReader.Volume = 1.0f;
             });
         }
 

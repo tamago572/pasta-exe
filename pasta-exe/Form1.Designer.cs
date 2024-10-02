@@ -61,7 +61,7 @@
             Controls.Add(reverbBar);
             Controls.Add(playPastaBtn);
             Name = "Form1";
-            Text = "Form1";
+            Text = "パスタ作ったお前.exe";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)reverbBar).EndInit();
             ResumeLayout(false);
