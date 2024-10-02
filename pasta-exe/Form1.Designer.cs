@@ -62,6 +62,7 @@
             Controls.Add(playPastaBtn);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)reverbBar).EndInit();
             ResumeLayout(false);
             PerformLayout();
