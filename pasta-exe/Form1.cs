@@ -21,16 +21,26 @@ namespace pasta_exe
 
         }
 
-        private void playPastaBtn_Click(object sender, EventArgs e)
+        private async void playPastaBtn_Click(object sender, EventArgs e)
         {
+
+
             pastaReader.Position = 0;
             pastaPlayer.Play();
             bgmReader.Volume = 0.0f;
+            await Task.Run(() =>
+            {
+                Thread.Sleep(pastaReader.TotalTime - TimeSpan.FromMilliseconds(435));
+                bgmReader.Volume = 1.0f;
+            });
         }
 
-        private void PastaPlayer_PlaybackStopped(object? sender, StoppedEventArgs e)
+        private async void PastaPlayer_PlaybackStopped(object? sender, StoppedEventArgs e)
         {
-            bgmReader.Volume = 1.0f;
+            await Task.Run(() =>
+            {
+                bgmReader.Volume = 1.0f;
+            });
         }
 
         private void Form1_Load(object sender, EventArgs e)
